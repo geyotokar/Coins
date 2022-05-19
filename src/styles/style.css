@@ -1,0 +1,135 @@
+a {
+    text-decoration: none;
+    color: #9DA1B4;
+}
+a.active {
+    color: #000000;;
+}
+.app-wrapper{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #223DCA;
+}
+.a-row {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 350px;
+}
+.a {
+    height: 3rem;
+    width: 3rem;
+    font-size: 2em;
+}
+.b {
+    border: solid 1px #223DCA;
+    border-radius: 0.5rem;
+    color: #9DA1B4;
+    background-color: #FFFFFF;
+}
+.c {
+    position: relative;
+    margin: auto;
+    width: 350px;
+    height: 4em;
+}
+.c-text {
+    position: absolute;
+    top: 0.2rem;
+    left: 1rem;
+    display: inline;
+    text-align: left;
+    font-size: 0.8em;
+}
+.c-amount {
+    position: absolute;
+    left: 1rem;
+    bottom: 0.5rem;
+    display: inline-block;
+}
+.c-form {
+    position: absolute;
+    bottom: 0.15rem;
+    left: 4rem;
+    display: inline-block;
+}
+.c-vs {
+    position: absolute;
+    bottom: 0.15rem;
+    left: 0.1rem;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+}
+.c-toggle {
+    position: absolute;
+    top: 0.2em;
+    right: 0.5em;
+    font-size: 2em;
+}
+.c-toggle:hover {
+    color: #223DCA;
+}
+.button {
+    margin-right: 0.1em;
+    border: none;
+    font-family: inherit;
+    font-weight: bold;
+    color: #9DA1B4;
+    background-color: #FFFFFF;
+}
+.form {
+    border: none;
+    font-size: 2em;
+    font-weight: bold;
+    color: #9DA1B4;
+}
+.form-input {
+    width: 6em;
+}
+.lb {
+    width: 8em;
+    padding: 1em;
+    border-radius: 20px 0 0 20px;
+}
+.rb {
+    width: 8em;
+    padding: 1em;
+    border-radius: 0 20px 20px 0;
+}
+.lb:hover, .rb:hover {
+    color: #FFFFFF;
+    background-color: #223DCA;
+}
+.icon {
+    width: 15px;
+    height: 15px;
+}
+.icon-l {
+    width: 30px;
+    height: 30px;
+}
+.logo {
+    position: relative;
+    top: -0.35rem;
+    margin-right: 0.1rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    border-radius: 100%;
+    font: bolder 1.5rem monospace;
+    color: #9DA1B4;
+    background-color: #FFFFFF;
+}
+.pie-container {
+    margin: auto;
+    width: 20em;
+}
+.chart-container {
+    margin: auto;
+    width: 30em;
+}
