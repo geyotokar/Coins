@@ -1,6 +1,9 @@
 import {API, GetPriceDataType, HistoryDataType} from './API'
-import {Action, applyMiddleware, compose, createStore} from "redux";
-import thunkMiddleware, {ThunkAction} from "redux-thunk";
+import {Action, applyMiddleware, compose, createStore} from 'redux'
+import thunkMiddleware, {ThunkAction} from 'redux-thunk'
+import {DefaultTheme} from 'styled-components'
+import {darkTheme, lightTheme} from '../styles/theme'
+import {ThemeEnum} from "../types/styledTypes";
 
 let initialState = {
     amount1: 1 as number,
@@ -9,7 +12,8 @@ let initialState = {
     historyBTCValues: [] as Array<number>,
     historyETHValues: [] as Array<number>,
     newHistoryValues: [] as Array<number>,
-    usd: 1 as number
+    usd: 1 as number,
+    theme: lightTheme as DefaultTheme
 }
 
 export type InitialStateType = typeof initialState
@@ -24,17 +28,17 @@ const REDUX = (state: InitialStateType = initialState, action: ActionsType): Ini
                 ...state,
                 value: action.data
             }
-        case "COINS/SET_AMOUNT1":
+        case 'COINS/SET_AMOUNT1':
             return {
                 ...state,
                 amount1: action.amount
             }
-        case "COINS/SET_AMOUNT2":
+        case 'COINS/SET_AMOUNT2':
             return {
                 ...state,
                 amount2: action.amount
             }
-        case "COINS/SET_BTC_HISTORY":
+        case 'COINS/SET_BTC_HISTORY':
             state.usd = action.data.market_data.current_price.valuesOf(action.data.market_data.current_price.usd) as number
             state.newHistoryValues = insert(state.historyBTCValues, action.id, state.usd)
             return {
@@ -42,13 +46,19 @@ const REDUX = (state: InitialStateType = initialState, action: ActionsType): Ini
                 ...action.data,
                 historyBTCValues: state.newHistoryValues
             }
-        case "COINS/SET_ETH_HISTORY":
+        case 'COINS/SET_ETH_HISTORY':
             state.usd = action.data.market_data.current_price.valuesOf(action.data.market_data.current_price.usd) as number
             state.newHistoryValues = insert(state.historyETHValues, action.id, state.usd)
             return {
                 ...state,
                 ...action.data,
                 historyETHValues: state.newHistoryValues
+            }
+        case 'COINS/TOGGLE_THEME':
+            let isLightTheme = state.theme.type === ThemeEnum.light
+            return {
+                ...state,
+                theme: isLightTheme ? darkTheme : lightTheme
             }
         default:
             return state;
@@ -63,7 +73,8 @@ export const actions = {
     setAmount1: (amount: number) => ({type: 'COINS/SET_AMOUNT1', amount} as const),
     setAmount2: (amount: number) => ({type: 'COINS/SET_AMOUNT2', amount} as const),
     setBTCHistory: (data: HistoryDataType, id: number) => ({type: 'COINS/SET_BTC_HISTORY', data, id} as const),
-    setETHHistory: (data: HistoryDataType, id: number) => ({type: 'COINS/SET_ETH_HISTORY', data, id} as const)
+    setETHHistory: (data: HistoryDataType, id: number) => ({type: 'COINS/SET_ETH_HISTORY', data, id} as const),
+    toggleTheme: () => ({type: 'COINS/TOGGLE_THEME'} as const)
 }
 //THUNK
 export const getPrice = (id: string, idVs: string): BaseThunkType<ActionsType> =>
@@ -87,6 +98,7 @@ type RootReducerType = typeof REDUX;
 export type AppStateType = ReturnType<RootReducerType>;
 export type InferActionsType<T> = T extends { [key: string]: (...args: any[]) => infer U } ? U : never
 export type BaseThunkType<A extends Action, R = Promise<void>> = ThunkAction<R, AppStateType, unknown, A>
+
 const store = createStore(REDUX, compose(applyMiddleware(thunkMiddleware)))
 
 export default store

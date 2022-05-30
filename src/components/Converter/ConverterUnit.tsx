@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {AmountForm} from "./AmountForm";
 import {Field, Form, Formik} from "formik";
+import icons from "../assets/icons";
 
 type ConverterType = {
     icon: string
@@ -27,7 +28,8 @@ const ConverterUnit: React.FC<ConverterType> = (props) => {
     if (!isOptionsVisible) {
         return <div className='b c'>
             <div className='c-text'>
-                <img className='icon' src={props.icon} alt='...'/> {props.name}, <img className='icon' src={props.icon} alt='...'/> 1 = {rate}{'\u0024'}</div>
+                <img className='icon' src={props.icon} alt='...'/> {props.name}, <img className='icon' src={props.icon} alt='...'/>
+                1 = {rate}<img className='icon' src={icons[2]} alt='...'/></div>
             <img className='icon-l c-amount' src={props.icon} alt='...'/>
             <div className='c-form'>
                 {props.changeAmount ?
