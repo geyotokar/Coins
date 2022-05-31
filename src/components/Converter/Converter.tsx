@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import '../../styles/style.css'
-import {useDispatch, useSelector} from "react-redux";
-import {actions, AppStateType, getPrice} from "../REDUX";
-import {Chart} from "./Chart";
-import ConverterUnit from "./ConverterUnit";
+import {useDispatch, useSelector} from 'react-redux'
+import {actions, AppStateType, getPrice} from '../REDUX'
+import {Chart} from './Chart'
+import ConverterUnit from './ConverterUnit'
 import icons from '../assets/icons'
+import {Aside, Content, Section} from '../../styles/components'
 
 const Converter: React.FC = React.memo(() => {
 
@@ -35,11 +36,13 @@ const Converter: React.FC = React.memo(() => {
     const icon1 = icons[0]
     const icon2 = icons[2]
 
-    return <div>
-        <ConverterUnit icon={icon1} name='BTC' amount={amount1} changeAmount={changeAmount} rate={rate} />
-        <ConverterUnit icon={icon2} name='BTC' amount={amount2}/>
-        <div className='chart-container'><Chart/></div>
-    </div>
+    return <Content>
+        <Section>
+            <ConverterUnit icon={icon1} name='BTC' amount={amount1} changeAmount={changeAmount} rate={rate} />
+            <ConverterUnit icon={icon2} name='BTC' amount={amount2}/>
+        </Section>
+        <Aside><Chart/></Aside>
+    </Content>
 })
 
 export default Converter

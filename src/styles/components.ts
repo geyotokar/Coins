@@ -31,3 +31,13 @@ export const Link = styled.a<{ font: string }>`
 export const Path = styled.path<{ fill: string }>`
     color: ${props => props.fill}
 `
+
+export const Icon = styled.img<{ src: string }>`
+  width: 30px;
+  height: 30px;
+`
+
+export const IconFont = styled.img<{ src: string }>`
+  width: 15px;
+  height: 15px;
+`

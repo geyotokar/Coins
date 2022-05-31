@@ -1,5 +1,5 @@
-import React from "react";
-import {Field, Form, Formik} from "formik";
+import React from 'react'
+import {Field, Form, Formik} from 'formik'
 
 type PropsType = {
     amount: number
@@ -16,8 +16,8 @@ export const AmountForm: React.FC<PropsType> = (props) => {
         <Formik initialValues={{amount: props.amount}} onSubmit={submit}>
             {({isSubmitting}) => (
                 <Form>
-                    <Field className='form form-input' type='text' name='amount'/>
-                    <button className='form' type="submit" disabled={isSubmitting}>
+                    <Field type='text' name='amount'/>
+                    <button type="submit" disabled={isSubmitting}>
                         +
                     </button>
                 </Form>
