@@ -14,4 +14,8 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  svg {
+    position: relative;
+    top: 3px;
+  }
 `

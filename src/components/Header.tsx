@@ -5,7 +5,7 @@ import {actions, AppStateType} from './REDUX'
 import styled from 'styled-components'
 import {Button, Link} from '../styles/components'
 import {ThemeType} from '../types/styledTypes'
-import {ConverterSVG, LogoSVG, PortfolioSVG, ThemeSVG} from './assets/SVG'
+import {SVG} from './assets/SVG'
 
 const Header: React.FC = () => {
     const theme = useSelector((state: AppStateType) => state.theme)
@@ -17,11 +17,10 @@ const Header: React.FC = () => {
     }
     return <header>
         <SideBar bg={font} font={bg}>
-            <SideBarItem><LogoSVG fill={bg}/></SideBarItem>
-
-            <SideBarItem><Button font={bg} onClick={toggleTheme}><ThemeSVG fill={bg}/></Button></SideBarItem>
-            <SideBarItem><Link font={bg}><NavLink to='/converter'><ConverterSVG fill={bg}/></NavLink></Link></SideBarItem>
-            <SideBarItem><Link font={bg}><NavLink to='/portfolio'><PortfolioSVG fill={bg}/></NavLink></Link></SideBarItem>
+            <SideBarItem><SVG id='logo' fill={bg}/></SideBarItem>
+            <SideBarItem><Button onClick={toggleTheme}><SVG id='theme' fill={bg}/></Button></SideBarItem>
+            <SideBarItem><Link><NavLink to='/converter'><SVG id='converter' fill={bg}/></NavLink></Link></SideBarItem>
+            <SideBarItem><Link><NavLink to='/portfolio'><SVG id='portfolio' fill={bg}/></NavLink></Link></SideBarItem>
         </SideBar>
     </header>
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import {ArcElement, Chart as ChartJS, Legend, Tooltip} from 'chart.js'
-import {Pie} from 'react-chartjs-2'
+import {Doughnut} from 'react-chartjs-2'
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -10,15 +10,16 @@ export const data = {
         {
             label: '# of Votes',
             data: [12, 19, 3],
+            // color2 of CoinItem, DE opacity
             backgroundColor: [
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)'
+                '#BCD9FFDE',
+                '#FCF9D9DE',
+                '#A7E6BADE'
             ],
             borderColor: [
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)'
+                '#BCD9FFDE',
+                '#FCF9D9DE',
+                '#A7E6BADE'
             ],
             borderWidth: 1,
         },
@@ -26,5 +27,5 @@ export const data = {
 };
 
 export const PieChart: React.FC = () => {
-    return <Pie data={data} />
+    return <Doughnut data={data} />
 }

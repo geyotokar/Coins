@@ -11,7 +11,7 @@ export const baseTheme: ThemeI = {
         success: '#4CAF50',
         danger: '#F44446',
 
-        bg: '#E5E4E8',
+        bg: '#E8E7EC',
         font: '#19191B'
     },
     media: {
