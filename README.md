@@ -11,7 +11,7 @@ Currency converter, exchange rate chart and cryptocurrency portfolio.
 ![Typescript](https://img.shields.io/badge/-Typescript-0E34A0?style=for-the-badge&logo=typescript)
 ![React](https://img.shields.io/badge/-React-FF4747?style=for-the-badge&logo=react)
 ![Redux](https://img.shields.io/badge/-Redux-DA2864?style=for-the-badge&logo=redux)
-![StyledComponents](https://img.shields.io/badge/-StyledComponents-DB7093?style=for-the-badge&logo=styled-components)
+![StyledComponents](https://img.shields.io/badge/-StyledComponents-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![Axios](https://img.shields.io/badge/-Axios-48CFAD?style=for-the-badge)
 ![Formik](https://img.shields.io/badge/-Formik-656D78?style=for-the-badge)
 
