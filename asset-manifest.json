@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Coins/static/css/main.afd7172b.chunk.css",
+    "main.js": "/Coins/static/js/main.bc894c51.chunk.js",
+    "main.js.map": "/Coins/static/js/main.bc894c51.chunk.js.map",
+    "runtime-main.js": "/Coins/static/js/runtime-main.44dbd6f7.js",
+    "runtime-main.js.map": "/Coins/static/js/runtime-main.44dbd6f7.js.map",
+    "static/js/2.790e66eb.chunk.js": "/Coins/static/js/2.790e66eb.chunk.js",
+    "static/js/2.790e66eb.chunk.js.map": "/Coins/static/js/2.790e66eb.chunk.js.map",
+    "static/js/3.dffd4a61.chunk.js": "/Coins/static/js/3.dffd4a61.chunk.js",
+    "static/js/3.dffd4a61.chunk.js.map": "/Coins/static/js/3.dffd4a61.chunk.js.map",
+    "index.html": "/Coins/index.html",
+    "static/css/main.afd7172b.chunk.css.map": "/Coins/static/css/main.afd7172b.chunk.css.map",
+    "static/js/2.790e66eb.chunk.js.LICENSE.txt": "/Coins/static/js/2.790e66eb.chunk.js.LICENSE.txt",
+    "static/media/bitcoin.a256dd67.svg": "/Coins/static/media/bitcoin.a256dd67.svg",
+    "static/media/dollar.39ac4cc0.svg": "/Coins/static/media/dollar.39ac4cc0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44dbd6f7.js",
+    "static/js/2.790e66eb.chunk.js",
+    "static/css/main.afd7172b.chunk.css",
+    "static/js/main.bc894c51.chunk.js"
+  ]
+}
